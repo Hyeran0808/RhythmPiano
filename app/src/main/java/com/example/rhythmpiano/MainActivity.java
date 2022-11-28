@@ -19,6 +19,7 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+//곡 선택하는 화면
 public class MainActivity extends AppCompatActivity{
 
     @Override

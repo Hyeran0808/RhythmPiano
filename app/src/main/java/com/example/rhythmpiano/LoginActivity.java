@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     // Google Sign In API와 호출할 구글 로그인 클라이언트
     GoogleSignInClient mGoogleSignInClient;
     private final int RC_SIGN_IN = 123;
-    private static final String TAG = "LoginActivity";
+    private static final String TAG = "Login";
     SignInButton signBt;
     Button logoutBt;
     @Override
@@ -75,6 +75,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Log.d(TAG, "handleSignInResult:personId "+personId);
                 Log.d(TAG, "handleSignInResult:personFamilyName "+personFamilyName);
                 Log.d(TAG, "handleSignInResult:personPhoto "+personPhoto);
+
+                //MainActivty로 이동
+                Intent intent = new Intent();
+                startActivity(intent);
+                finish();
             }
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
@@ -90,15 +95,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.sign_in_button:
                 signIn();
                 break;
-            case R.id.logoutBt:
-                mGoogleSignInClient.signOut()
-                        .addOnCompleteListener(this, task -> {
-                            Log.d(TAG, "onClick:logout success ");
-                            mGoogleSignInClient.revokeAccess()
-                                    .addOnCompleteListener(this, task1 -> Log.d(TAG, "onClick:revokeAccess success "));
-
-                        });
-                break;
+                //
+//            case R.id.logoutBt:
+//                mGoogleSignInClient.signOut()
+//                        .addOnCompleteListener(this, task -> {
+//                            Log.d(TAG, "onClick:logout success ");
+//                            mGoogleSignInClient.revokeAccess()
+//                                    .addOnCompleteListener(this, task1 -> Log.d(TAG, "onClick:revokeAccess success "));
+//
+//                        });
+//                break;
 
         }
     }

@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/KHR/RhythmPiano/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/KHR/RhythmPiano/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/KHR/RhythmPiano/app/src/main/res/layout/activity_login.xml" value="0.128125" />
         <entry key="..\:/KHR/RhythmPiano/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/KHR/RhythmPiano/app/src/main/res/layout/activity_splash.xml" value="0.128125" />
       </map>
     </option>
   </component>

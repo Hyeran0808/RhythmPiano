@@ -76,8 +76,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Log.d(TAG, "handleSignInResult:personFamilyName "+personFamilyName);
                 Log.d(TAG, "handleSignInResult:personPhoto "+personPhoto);
 
+                //내부 저장소에 저장
+
                 //MainActivty로 이동
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
             }
